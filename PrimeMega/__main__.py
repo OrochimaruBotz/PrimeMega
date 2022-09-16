@@ -102,10 +102,6 @@ buttons = [
         InlineKeyboardButton(text="Help Bot", callback_data="help_back"),
         InlineKeyboardButton(
             text="Support 💌", url=f"t.me/HumanzBotSupport"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
     ],
 ]
 
