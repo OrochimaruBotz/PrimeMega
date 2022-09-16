@@ -85,28 +85,27 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
+✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/0125e8e8815bd3d495029.jpg)
 ────────────────────────
-I'm a powerful group management bot built to help you manage your group!
-────────────────────
-Hit the /help or tap on button to se available command on Me.
+× *Uptime:* `{}`
+× `{}` *users, across* `{}` *chats.*
+────────────────────────
+✪ Hit /help to see my available commands.
 """
 
 buttons = [
-        [
+    [
         InlineKeyboardButton(
-            text=f"➕️ Add {BOT_NAME} to your group ➕️", url=f"t.me/{BOT_USERNAME}?startgroup=true"
+            text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+    ],
+    [
+        InlineKeyboardButton(text="Help Bot", callback_data="help_back"),
+        InlineKeyboardButton(
+            text="Support 💌", url=f"t.me/HumanzBotSupport"
         ),
     ],
     [
-        InlineKeyboardButton(text="Support", url=f"https://t.me/{SUPPORT_CHAT}"
-        ),
-        InlineKeyboardButton(
-            text="TryInline", switch_inline_query_current_chat=""
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="Help & Commands❔", callback_data="help_back"
-        ),
+        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
     ],
 ]
 
@@ -114,12 +113,9 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-PRIME_IMG = "https://telegra.ph/file/b9fa4e1360d0a872a3cd5.jpg"
+PRIME_IMG = "https://telegra.ph/file/06ce9343d9685e6ce2f56.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @Bukan_guudlooking \
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """Bot Gratis Njime:v ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -455,7 +451,7 @@ def prime_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url=f"t.me/{SUPPORT_CHAT}"),
+                    InlineKeyboardButton(text="Support", url=f"t.me/HumanzBotSupport"),
                     InlineKeyboardButton(text="Updates", url=f"https://t.me/{SUPPORT_CHANNEL}"),
                  ],
                  [
@@ -469,13 +465,13 @@ def prime_about_callback(update, context):
 
     elif query.data == "prime_credit":
         query.message.edit_text(
-            text=f"<b>๏ Credis for primeMega</b>\n"
-            f"\nHere Developers Making The PrimeMegaRobot",
+            text=f"<b>๏ Credis fort Gojo</b>\n"
+            f"\nHere Developers Making The GojoRobot",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Tonic", url="t.me/Bukan_guudlooking"),
+                    InlineKeyboardButton(text="Humanz", url="t.me/BijiKacang"),
                     InlineKeyboardButton(text="x~b", url="t.me/Xbarok"),
                  ],
                  [
@@ -754,7 +750,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1606221784:
+        if OWNER_ID != :
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
                 "[My Channel]({})".format(DONATION_LINK),
