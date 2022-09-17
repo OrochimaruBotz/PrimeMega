@@ -85,28 +85,27 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
+✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/0125e8e8815bd3d495029.jpg)
 ────────────────────────
-I'm a powerful group management bot built to help you manage your group![🔥](https://telegra.ph/file/0125e8e8815bd3d495029.jpg)
-────────────────────
-Hit the /help or tap on button to se available command on Me.
+× *Uptime:* `{}`
+× `{}` *users, across* `{}` *chats.*
+────────────────────────
+✪ Hit /help to see my available commands.
 """
 
 buttons = [
-        [
+    [
         InlineKeyboardButton(
-            text=f"➕️ Add {BOT_NAME} to your group ➕️", url=f"t.me/{BOT_USERNAME}?startgroup=true"
+            text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+    ],
+    [
+        InlineKeyboardButton(text="Get Help ❓", callback_data="help_back"),
+        InlineKeyboardButton(
+            text="Support 💌", url=f"t.me/HumanzBotSupport"
         ),
     ],
     [
-        InlineKeyboardButton(text="Support", url=f"https://t.me/{SUPPORT_CHAT}"
-        ),
-        InlineKeyboardButton(
-            text="TryInline", switch_inline_query_current_chat=""
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="Help & Commands❔", callback_data="help_back"
-        ),
+        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
     ],
 ]
 
