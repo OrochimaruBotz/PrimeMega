@@ -96,7 +96,7 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+            text="➗ Add Me To Your Group ➗", url=f"t.me/{BOT_USERNAME}?startgroup=new"),
     ],
     [
         InlineKeyboardButton(text="Get Help ❓", callback_data="help_back"),
