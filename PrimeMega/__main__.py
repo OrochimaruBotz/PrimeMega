@@ -105,7 +105,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
+        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name} 🤖", callback_data="prime_"),
     ],
 ]
 
