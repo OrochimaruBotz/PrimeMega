@@ -94,20 +94,27 @@ Hit the /mhelp To view the music command menu
 """
 
 buttons = [
-        [
+    [
+        InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅ​", callback_data="help_back"),
+    ],
+    [
+        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="prime_"),
         InlineKeyboardButton(
-            text=f"➕️ Add {BOT_NAME} to your group ➕️", url=f"t.me/{BOT_USERNAME}?startgroup=true"
+            text="ᴛʀʏ ɪɴʟɪɴᴇ​", switch_inline_query_current_chat=""
         ),
     ],
     [
-        InlineKeyboardButton(text="Support", url=f"https://t.me/{SUPPORT_CHAT}"
+        InlineKeyboardButton(
+            text="ᴅᴏɴᴀᴛɪᴏɴ ❤️", url="https://t.me/BijiKacang"
         ),
         InlineKeyboardButton(
-            text="TryInline", switch_inline_query_current_chat=""
+            text="sᴜᴘᴘᴏʀᴛ​ 🇮🇩", url=f"https://t.me/{SUPPORT_CHAT}"
         ),
     ],
     [
-        InlineKeyboardButton(text="Help & Commands❔", callback_data="help_back"
+        InlineKeyboardButton(
+            text="➗ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➗", 
+            url="t.me/GojoManagerBot?startgroup=new"
         ),
     ],
 ]
