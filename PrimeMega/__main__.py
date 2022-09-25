@@ -87,9 +87,9 @@ PM_START_TEXT = """
 Hello Im !
 ────────────────────────
 🔥 I'm an wibu theme bot designed to help manage and playing music your telegram group with a lot features.
-🔥 Maintained by ʙᴧɢᴧsҡᴧʀᴧ
+🔥 Maintained by [Humanz](t.me/BijiKacang)
 ────────────────────────
-Hit the /Help To view the menu command manage
+Hit the /help To view the menu command manage
 Hit the /mhelp To view the music command menu
 """
 
